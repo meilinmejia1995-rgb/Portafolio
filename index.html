@@ -1,0 +1,776 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Portafolio Profesional | Meilyn Mejia</title>
+
+    <!-- LIBRERÍA PARA GENERAR CÓDIGOS QR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #008060;
+            color: #253247;
+            line-height: 1.7;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            background: linear-gradient(
+                135deg,
+                #004d40,
+                #009e77
+            );
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 19px;
+            color: #e0fff3;
+        }
+
+        /* MENÚ DE NAVEGACIÓN */
+
+        nav {
+            background: white;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 18px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #006b50;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #00a67d;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 25px;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+        }
+
+        h2 {
+            color: #007458;
+            margin-bottom: 20px;
+            font-size: 25px;
+            border-bottom: 2px solid #cceee2;
+            padding-bottom: 10px;
+        }
+
+        .perfil {
+            font-size: 17px;
+            text-align: justify;
+            margin-bottom: 18px;
+        }
+
+        /* DATOS PERSONALES */
+
+        .datos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .dato {
+            background: #e8f7f0;
+            padding: 15px;
+            border-radius: 9px;
+            overflow-wrap: anywhere;
+        }
+
+        .dato strong {
+            display: block;
+            color: #006b50;
+            margin-bottom: 5px;
+        }
+
+        /* TARJETAS */
+
+        .tarjeta {
+            border-left: 4px solid #009e77;
+            background: #edf9f4;
+            padding: 20px;
+            margin-top: 12px;
+            border-radius: 5px;
+        }
+
+        .tarjeta h3 {
+            color: #006b50;
+            margin-bottom: 8px;
+        }
+
+        /* BOTONES */
+
+        .boton {
+            display: inline-block;
+            padding: 14px 25px;
+            margin: 10px 5px;
+            background-color: #007458;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #00a67d;
+            transform: translateY(-2px);
+        }
+
+        .boton-pdf {
+            background-color: #b32632;
+        }
+
+        .boton-pdf:hover {
+            background-color: #d43b48;
+        }
+
+        .boton-qr {
+            background-color: #006b50;
+        }
+
+        .boton-contacto {
+            background-color: #007458;
+        }
+
+        /* SECCIÓN DE DESCARGA */
+
+        .descarga {
+            text-align: center;
+        }
+
+        .descarga p {
+            margin-bottom: 15px;
+        }
+
+        /* CÓDIGO QR */
+
+        .seccion-qr {
+            text-align: center;
+        }
+
+        #codigoQR {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 25px auto;
+            min-height: 200px;
+        }
+
+        #codigoQR img,
+        #codigoQR canvas {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .mensaje-qr {
+            background: #e8f7f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            overflow-wrap: anywhere;
+        }
+
+        /* CONTACTO */
+
+        .contacto a:not(.boton) {
+            color: #006b50;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .contacto a:hover {
+            text-decoration: underline;
+        }
+
+        /* PIE DE PÁGINA */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #004d40;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* ADAPTACIÓN A CELULARES */
+
+        @media (max-width: 650px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            .datos {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 22px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .boton {
+                width: 100%;
+                margin: 8px 0;
+            }
+        }
+
+        /* DISEÑO PARA DESCARGAR EN PDF */
+
+        @media print {
+
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+
+            body {
+                background: white !important;
+                color: black;
+            }
+
+            header {
+                background: #e8f7f0 !important;
+                color: #004d40 !important;
+                padding: 20px;
+            }
+
+            header p {
+                color: #004d40 !important;
+            }
+
+            main {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                margin: 15px 0;
+                padding: 20px;
+                break-inside: avoid;
+            }
+
+            nav,
+            .descarga,
+            .boton,
+            .no-imprimir {
+                display: none !important;
+            }
+
+            .tarjeta,
+            .dato {
+                background: #f0f7f4 !important;
+            }
+
+            .seccion-qr {
+                break-inside: avoid;
+            }
+
+            footer {
+                background: white !important;
+                color: black;
+            }
+
+            h2 {
+                color: #006b50;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <h1>Meilyn Mejia</h1>
+
+        <p>Estudiante de Administración Tecnológica</p>
+
+        <p>
+            Institución Universitaria ITM |
+            Medellín, Colombia
+        </p>
+
+    </header>
+
+    <!-- MENÚ -->
+
+    <nav class="no-imprimir">
+
+        <a href="#inicio">Sobre mí</a>
+
+        <a href="#datos">Datos personales</a>
+
+        <a href="#formacion">Formación</a>
+
+        <a href="#experiencia">Experiencia</a>
+
+        <a href="#descargar">Descargar PDF</a>
+
+        <a href="#qr">Código QR</a>
+
+        <a href="#contacto">Contacto</a>
+
+    </nav>
+
+    <main>
+
+        <!-- PERFIL PROFESIONAL -->
+
+        <section id="inicio">
+
+            <h2>Sobre mí y perfil profesional</h2>
+
+            <p class="perfil">
+                Soy Meilyn Mejia, estudiante de séptimo
+                semestre de Administración Tecnológica
+                en la Institución Universitaria ITM,
+                ubicada en Medellín, Colombia.
+            </p>
+
+            <p class="perfil">
+                Cuento con experiencia como Auxiliar
+                Administrativo y me encuentro en proceso
+                de formación profesional para fortalecer
+                mis conocimientos en gestión administrativa,
+                organización empresarial y procesos
+                tecnológicos.
+            </p>
+
+            <p class="perfil">
+                Mi objetivo es continuar creciendo
+                profesionalmente y aportar mis conocimientos
+                al desarrollo de las organizaciones.
+            </p>
+
+            <h2>Perfil del Administrador Tecnológico ITM</h2>
+
+            <p class="perfil">
+                El Administrador Tecnológico del ITM es un
+                ciudadano global que cuenta con formación
+                integral, con cualidades éticas y de
+                autonomía para su desarrollo profesional,
+                con capacidad para planear, organizar,
+                dirigir, controlar y evaluar los procesos
+                de gestión del conocimiento, tecnología
+                e innovación, alineándolos con la estrategia
+                para el logro de los objetivos de las
+                organizaciones en las que interviene,
+                lo cual le permite tomar decisiones en
+                contextos complejos, dinámicos e inciertos.
+            </p>
+
+        </section>
+
+        <!-- DATOS PERSONALES -->
+
+        <section id="datos">
+
+            <h2>Datos personales</h2>
+
+            <div class="datos">
+
+                <div class="dato">
+                    <strong>Nombre completo</strong>
+                    Meilyn Mejia
+                </div>
+
+                <div class="dato">
+                    <strong>Documento de identidad</strong>
+                    1.066.574.808
+                </div>
+
+                <div class="dato">
+                    <strong>Edad</strong>
+                    31 años
+                </div>
+
+                <div class="dato">
+                    <strong>Ubicación</strong>
+                    Belén La Gloria, Medellín
+                </div>
+
+                <div class="dato">
+                    <strong>Perfil ocupacional</strong>
+                    Administración Tecnológica
+                </div>
+
+                <div class="dato">
+                    <strong>Correo electrónico</strong>
+                    meilinmejia1995@gmail.com
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FORMACIÓN ACADÉMICA -->
+
+        <section id="formacion">
+
+            <h2>Formación académica</h2>
+
+            <div class="tarjeta">
+
+                <h3>Administración Tecnológica</h3>
+
+                <p>
+                    <strong>Institución:</strong>
+                    Institución Universitaria ITM
+                </p>
+
+                <p>
+                    <strong>Semestre:</strong>
+                    Séptimo semestre
+                </p>
+
+                <p>
+                    <strong>Estado:</strong>
+                    En formación
+                </p>
+
+                <p>
+                    <strong>Ciudad:</strong>
+                    Medellín, Colombia
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- EXPERIENCIA LABORAL -->
+
+        <section id="experiencia">
+
+            <h2>Experiencia laboral</h2>
+
+            <div class="tarjeta">
+
+                <h3>Auxiliar Administrativo</h3>
+
+                <p>
+                    Experiencia laboral en el área
+                    administrativa.
+                </p>
+
+                <p>
+                    Esta experiencia complementa
+                    mi formación académica en
+                    Administración Tecnológica
+                    y contribuye a mi desarrollo
+                    profesional.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- NUEVA FUNCIÓN: DESCARGAR PDF -->
+
+        <section id="descargar" class="descarga">
+
+            <h2>Descargar mi portafolio</h2>
+
+            <p>
+                Puedes guardar una copia de mi
+                portafolio profesional en formato PDF.
+            </p>
+
+            <button
+                class="boton boton-pdf"
+                onclick="descargarPDF()">
+
+                📄 Descargar portafolio en PDF
+
+            </button>
+
+        </section>
+
+        <!-- NUEVA FUNCIÓN: CÓDIGO QR -->
+
+        <section id="qr" class="seccion-qr">
+
+            <h2>Escanea mi portafolio</h2>
+
+            <p>
+                Escanea el siguiente código QR
+                con la cámara de tu celular
+                para visitar mi portafolio web.
+            </p>
+
+            <div id="codigoQR"></div>
+
+            <div class="mensaje-qr" id="mensajeQR">
+                Generando código QR...
+            </div>
+
+            <button
+                class="boton boton-qr no-imprimir"
+                id="botonDescargarQR"
+                onclick="descargarQR()"
+                style="display:none;">
+
+                Descargar código QR
+
+            </button>
+
+        </section>
+
+        <!-- CONTACTO -->
+
+        <section id="contacto" class="contacto">
+
+            <h2>Contacto</h2>
+
+            <p>
+                Si deseas comunicarte conmigo
+                para oportunidades laborales
+                o profesionales, puedes hacerlo
+                a través de mi correo electrónico.
+            </p>
+
+            <p>
+                <strong>Correo:</strong>
+
+                <a href="mailto:meilinmejia1995@gmail.com">
+                    meilinmejia1995@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>Ubicación:</strong>
+                Medellín, Colombia
+            </p>
+
+            <a
+                class="boton boton-contacto"
+                href="mailto:meilinmejia1995@gmail.com">
+
+                ✉️ Contáctame
+
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <p>© 2026 Meilyn Mejia</p>
+
+        <p>
+            Portafolio profesional |
+            Administración Tecnológica
+        </p>
+
+    </footer>
+
+    <!-- FUNCIONES JAVASCRIPT -->
+
+    <script>
+
+        /*
+         * CONFIGURACIÓN DEL PORTAFOLIO
+         *
+         * Cuando publiques tu página, puedes colocar
+         * aquí su enlace público.
+         *
+         * Ejemplo:
+         * const URL_PORTAFOLIO =
+         * "https://tuusuario.github.io/portafolio/";
+         *
+         * Si lo dejas vacío, se utilizará
+         * automáticamente la URL de la página.
+         */
+
+        const URL_PORTAFOLIO = "";
+
+        /* FUNCIÓN PARA GUARDAR COMO PDF */
+
+        function descargarPDF() {
+
+            /*
+             * Abre la ventana de impresión.
+             *
+             * Selecciona "Guardar como PDF"
+             * y presiona Guardar.
+             */
+
+            window.print();
+
+        }
+
+        /* FUNCIÓN PARA GENERAR EL CÓDIGO QR */
+
+        function generarQR() {
+
+            const contenedor =
+                document.getElementById("codigoQR");
+
+            const mensaje =
+                document.getElementById("mensajeQR");
+
+            const boton =
+                document.getElementById("botonDescargarQR");
+
+            const url = URL_PORTAFOLIO.trim() ||
+                (window.location.protocol === "https:" ||
+                 window.location.protocol === "http:"
+                    ? window.location.href
+                    : "");
+
+            if (!url || !/^https?:\/\//i.test(url)) {
+
+                mensaje.textContent =
+                    "Para generar un QR que funcione " +
+                    "desde otros celulares, primero " +
+                    "publica tu portafolio en internet " +
+                    "o configura su dirección web " +
+                    "en la variable URL_PORTAFOLIO.";
+
+                return;
+            }
+
+            if (typeof QRCode === "undefined") {
+
+                mensaje.textContent =
+                    "No se pudo cargar la biblioteca QR. " +
+                    "Comprueba tu conexión a internet.";
+
+                return;
+            }
+
+            contenedor.innerHTML = "";
+
+            new QRCode(contenedor, {
+
+                text: url,
+
+                width: 200,
+
+                height: 200,
+
+                colorDark: "#004d40",
+
+                colorLight: "#ffffff",
+
+                correctLevel: QRCode.CorrectLevel.H
+
+            });
+
+            mensaje.textContent =
+                "Escanea este código para visitar: " + url;
+
+            boton.style.display = "inline-block";
+
+        }
+
+        /* FUNCIÓN PARA DESCARGAR EL QR */
+
+        function descargarQR() {
+
+            const contenedor =
+                document.getElementById("codigoQR");
+
+            const imagen =
+                contenedor.querySelector("img");
+
+            const canvas =
+                contenedor.querySelector("canvas");
+
+            let origen = "";
+
+            if (canvas) {
+                origen = canvas.toDataURL("image/png");
+            } else if (imagen) {
+                origen = imagen.src;
+            }
+
+            if (!origen) {
+                alert("No se pudo descargar el código QR.");
+                return;
+            }
+
+            const enlace = document.createElement("a");
+
+            enlace.href = origen;
+
+            enlace.download =
+                "Codigo_QR_Portafolio_Meilyn_Mejia.png";
+
+            document.body.appendChild(enlace);
+
+            enlace.click();
+
+            document.body.removeChild(enlace);
+
+        }
+
+        /* GENERAR QR AL CARGAR LA PÁGINA */
+
+        window.addEventListener("load", generarQR);
+
+    </script>
+
+</body>
+</html>
+
