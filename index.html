@@ -1,6 +1,1109 @@
 
-<img
-    src="./foto-perfil.jpeg"
-    alt="Fotografía profesional de Meilyn Mejia Palacio"
-    class="foto-perfil"
->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Portafolio Profesional | Meilyn Mejia Palacio
+    </title>
+
+    <style>
+
+        /* ESTILOS GENERALES */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #E9EEF4;
+            color: #293548;
+            line-height: 1.7;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            background: linear-gradient(
+                135deg, #14263D, #315779
+            );
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        /* FOTOGRAFÍA PROFESIONAL */
+
+        .foto-perfil {
+            width: 185px;
+            height: 185px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 25%;
+            border: 5px solid white;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #E3EBF5;
+        }
+
+        .subtitulo {
+            margin-top: 12px;
+            font-size: 17px;
+        }
+
+        /* MENÚ DE NAVEGACIÓN */
+
+        nav {
+            background: white;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 18px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        nav a {
+            color: #254A70;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #447CA9;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+
+        main {
+            max-width: 1050px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 25px;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            color: #254A70;
+            margin-bottom: 22px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #DBE5EF;
+            font-size: 25px;
+        }
+
+        h3 {
+            color: #254A70;
+            margin-bottom: 8px;
+        }
+
+        /* PERFIL PROFESIONAL */
+
+        .perfil {
+            font-size: 17px;
+            text-align: justify;
+            margin-bottom: 18px;
+        }
+
+        /* DATOS PERSONALES */
+
+        .datos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .dato {
+            background: #F1F5FA;
+            padding: 15px;
+            border-radius: 9px;
+            overflow-wrap: anywhere;
+        }
+
+        .dato strong {
+            display: block;
+            color: #254A70;
+            margin-bottom: 5px;
+        }
+
+        /* FORMACIÓN ACADÉMICA */
+
+        .formacion {
+            padding: 22px;
+            margin-bottom: 20px;
+            background: #F4F7FB;
+            border-left: 5px solid #315779;
+            border-radius: 8px;
+        }
+
+        .formacion h3 {
+            font-size: 20px;
+        }
+
+        .formacion p {
+            margin-bottom: 5px;
+        }
+
+        /* EXPERIENCIA LABORAL */
+
+        .experiencia {
+            padding: 25px;
+            margin-bottom: 25px;
+            background: #F4F7FB;
+            border-left: 5px solid #315779;
+            border-radius: 8px;
+        }
+
+        .empresa {
+            font-weight: bold;
+            color: #315779;
+        }
+
+        .fecha {
+            color: #66788A;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .experiencia h4 {
+            color: #254A70;
+            margin-bottom: 10px;
+        }
+
+        .experiencia ul {
+            margin-left: 23px;
+        }
+
+        .experiencia li {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        /* CURSOS */
+
+        .curso {
+            background: #F4F7FB;
+            border-left: 4px solid #447CA9;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 7px;
+        }
+
+        .curso p {
+            margin-bottom: 5px;
+        }
+
+        /* PROYECTOS */
+
+        .contenedor-proyectos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .proyecto {
+            background: #F4F7FB;
+            border-radius: 12px;
+            padding: 25px;
+            border-top: 5px solid #315779;
+            transition: 0.3s;
+        }
+
+        .proyecto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+
+        .proyecto h3 {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .proyecto p {
+            text-align: justify;
+        }
+
+        .pasado {
+            border-top-color: #7893AC;
+        }
+
+        .presente {
+            border-top-color: #315779;
+        }
+
+        .futuro {
+            border-top-color: #1B786F;
+        }
+
+        /* LINKEDIN */
+
+        .linkedin {
+            background: #F1F5FA;
+            padding: 22px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .linkedin p {
+            margin-bottom: 12px;
+        }
+
+        /* BOTONES */
+
+        .boton {
+            display: inline-block;
+            padding: 14px 25px;
+            margin: 10px 5px;
+            background: #254A70;
+            color: white !important;
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: #447CA9;
+            transform: translateY(-2px);
+        }
+
+        .boton-pdf {
+            background: #A52D3D;
+        }
+
+        .boton-pdf:hover {
+            background: #C04353;
+        }
+
+        .boton-linkedin {
+            background: #0A66C2;
+        }
+
+        .boton-linkedin:hover {
+            background: #084C91;
+        }
+
+        /* DESCARGA PDF */
+
+        .descarga {
+            text-align: center;
+        }
+
+        /* CONTACTO */
+
+        .contacto a:not(.boton) {
+            color: #254A70;
+            overflow-wrap: anywhere;
+        }
+
+        .contacto p {
+            margin-bottom: 12px;
+        }
+
+        /* PIE DE PÁGINA */
+
+        footer {
+            background: #14263D;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* ADAPTACIÓN A CELULARES */
+
+        @media (max-width: 750px) {
+
+            .datos {
+                grid-template-columns: 1fr;
+            }
+
+            .contenedor-proyectos {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            .foto-perfil {
+                width: 150px;
+                height: 150px;
+            }
+
+            section {
+                padding: 22px;
+            }
+
+            .boton {
+                max-width: 100%;
+            }
+        }
+
+        /* FORMATO PARA PDF */
+
+        @media print {
+
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+
+            body {
+                background: white !important;
+                color: black;
+                font-size: 12px;
+            }
+
+            header {
+                background: #E9EEF4 !important;
+                color: #14263D !important;
+                padding: 20px;
+            }
+
+            header p {
+                color: #14263D !important;
+            }
+
+            .foto-perfil {
+                width: 110px;
+                height: 110px;
+                border: 3px solid #315779;
+            }
+
+            main {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                margin: 15px 0;
+                padding: 20px;
+                break-inside: auto;
+            }
+
+            nav,
+            .descarga,
+            .boton,
+            .no-imprimir {
+                display: none !important;
+            }
+
+            .formacion,
+            .experiencia,
+            .curso,
+            .proyecto {
+                break-inside: avoid;
+            }
+
+            .contenedor-proyectos {
+                grid-template-columns: 1fr;
+            }
+
+            .proyecto {
+                margin-bottom: 12px;
+            }
+
+            footer {
+                background: white !important;
+                color: black;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO Y FOTOGRAFÍA -->
+
+    <header>
+
+        <img
+            src="./foto-perfil.jpeg"
+            alt="Fotografía de Meilyn Mejia Palacio"
+            class="foto-perfil"
+        >
+
+        <h1>Meilyn Mejia Palacio</h1>
+
+        <p>
+            Tecnóloga en Gestión Administrativa
+        </p>
+
+        <p>
+            Estudiante de Administración Tecnológica
+        </p>
+
+        <p class="subtitulo">
+            Institución Universitaria ITM
+        </p>
+
+        <p>
+            Medellín, Antioquia
+        </p>
+
+    </header>
+
+    <!-- MENÚ -->
+
+    <nav class="no-imprimir">
+
+        <a href="#perfil">Perfil</a>
+        <a href="#datos">Datos</a>
+        <a href="#educacion">Educación</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#descargar">PDF</a>
+
+    </nav>
+
+    <main>
+
+        <!-- PERFIL PROFESIONAL UNIFICADO -->
+
+        <section id="perfil">
+
+            <h2>Perfil profesional</h2>
+
+            <p class="perfil">
+
+                Soy Meilyn Mejia Palacio, Tecnóloga en
+                Gestión Administrativa y estudiante
+                de Administración Tecnológica en la
+                Institución Universitaria ITM.
+
+                Cuento con formación técnica en
+                Seguridad Ocupacional y experiencia
+                laboral en procesos administrativos,
+                operativos y de servicio al ciudadano.
+
+            </p>
+
+            <p class="perfil">
+
+                A lo largo de mi trayectoria profesional
+                he desarrollado competencias en gestión
+                documental, administración de inventarios,
+                atención al usuario, manejo de personal,
+                negociación con proveedores, control de
+                información y apoyo al seguimiento del
+                sistema de seguridad y salud en el trabajo.
+
+                Estas experiencias me han permitido
+                fortalecer mis capacidades de organización,
+                comunicación, análisis y gestión de los
+                recursos empresariales.
+
+            </p>
+
+            <p class="perfil">
+
+                Mi formación en Administración Tecnológica
+                me permite integrar conocimientos
+                administrativos con una visión estratégica
+                orientada a la gestión del conocimiento,
+                la tecnología y la innovación.
+
+                Me preparo para planear, organizar,
+                dirigir, controlar y evaluar procesos
+                organizacionales, alineándolos con los
+                objetivos empresariales y contribuyendo
+                a la toma de decisiones en entornos
+                dinámicos y cambiantes.
+
+            </p>
+
+            <p class="perfil">
+
+                Me caracterizo por mi compromiso con
+                el aprendizaje continuo, la ética
+                profesional, la responsabilidad y
+                la mejora de los procesos.
+
+                Mi propósito es aportar al crecimiento
+                y transformación de las organizaciones,
+                promoviendo soluciones eficientes,
+                innovadoras y sostenibles.
+
+            </p>
+
+        </section>
+
+        <!-- DATOS PERSONALES -->
+
+        <section id="datos">
+
+            <h2>Datos personales</h2>
+
+            <div class="datos">
+
+                <div class="dato">
+                    <strong>Nombre completo</strong>
+                    Meilyn Mejia Palacio
+                </div>
+
+
+                <div class="dato">
+                    <strong>Edad</strong>
+                    31 años
+                </div>
+
+                <div class="dato">
+                    <strong>Ubicación</strong>
+                    Medellín, Antioquia
+                </div>
+
+                <div class="dato">
+                    <strong>Perfil ocupacional</strong>
+                    Administración Tecnológica
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- FORMACIÓN ACADÉMICA -->
+
+        <section id="educacion">
+
+            <h2>Formación académica</h2>
+
+            <!-- EDUCACIÓN PROFESIONAL -->
+
+            <div class="formacion">
+
+                <h3>
+                    Administración Tecnológica
+                </h3>
+
+                <p>
+                    <strong>Institución:</strong>
+                    Institución Universitaria ITM
+                </p>
+
+                <p>
+                    <strong>Nivel:</strong>
+                    Profesional universitario
+                </p>
+
+                <p>
+                    <strong>Estado:</strong>
+                    En curso - Séptimo semestre
+                </p>
+
+            </div>
+
+            <!-- EDUCACIÓN TECNOLÓGICA -->
+
+            <div class="formacion">
+
+                <h3>
+                    Tecnología en Gestión Administrativa
+                </h3>
+
+                <p>
+                    <strong>Institución:</strong>
+                    Instituto Tecnológico Metropolitano
+                </p>
+
+                <p>
+                    <strong>Nivel:</strong>
+                    Tecnológico
+                </p>
+
+                <p>
+                    <strong>Año:</strong>
+                    2021
+                </p>
+
+                <p>
+                    <strong>Estado:</strong>
+                    Finalizado
+                </p>
+
+            </div>
+
+            <!-- EDUCACIÓN TÉCNICA -->
+
+            <div class="formacion">
+
+                <h3>
+                    Técnico Laboral en Seguridad Ocupacional
+                </h3>
+
+                <p>
+                    <strong>Institución:</strong>
+                    Fundación Tecnológica del Sur de
+                    Córdoba - INDESCOR
+                </p>
+
+                <p>
+                    <strong>Nivel:</strong>
+                    Técnico laboral
+                </p>
+
+                <p>
+                    <strong>Año:</strong>
+                    2013
+                </p>
+
+                <p>
+                    <strong>Estado:</strong>
+                    Finalizado
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- EXPERIENCIA LABORAL -->
+
+        <section id="experiencia">
+
+            <h2>Experiencia laboral</h2>
+
+            <!-- DIGITAL ACCESS -->
+
+            <div class="experiencia">
+
+                <h3>
+                    Auxiliar Administrativo
+                </h3>
+
+                <p class="empresa">
+                    Digital Access
+                </p>
+
+                <p class="fecha">
+                    Octubre 2022 – Octubre 2026
+                </p>
+
+                <h4>Funciones:</h4>
+
+                <ul>
+
+                    <li>
+                        Negociar y evaluar con los
+                        proveedores los plazos de
+                        entrega, precios y condiciones
+                        de compra.
+                    </li>
+
+                    <li>
+                        Manejo de personal,
+                        documentación e inventario.
+                    </li>
+
+                    <li>
+                        Apoyar el seguimiento del
+                        sistema de seguridad y
+                        salud ocupacional en
+                        la empresa.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- ICONTEC -->
+
+            <div class="experiencia">
+
+                <h3>
+                    Aprendiz Administrativo
+                </h3>
+
+                <p class="empresa">
+                    ICONTEC
+                </p>
+
+                <p class="fecha">
+                    Febrero 2021 – Julio 2021
+                </p>
+
+                <h4>Funciones:</h4>
+
+                <ul>
+
+                    <li>
+                        Manejo de información digital
+                        de los certificados preimpresos,
+                        auditorías e informes.
+                    </li>
+
+                    <li>
+                        Enviar y almacenar las bases
+                        de datos a las partes interesadas
+                        para su debido control.
+                    </li>
+
+                    <li>
+                        Generar y enviar información
+                        de las cuentas de cobro.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- QUIPUX -->
+
+            <div class="experiencia">
+
+                <h3>
+                    Auxiliar Operativo de Servicio
+                </h3>
+
+                <p class="empresa">
+                    Quipux
+                </p>
+
+                <p class="fecha">
+                    Marzo 2017 – Abril 2020
+                </p>
+
+                <h4>Funciones:</h4>
+
+                <ul>
+
+                    <li>
+                        Brindar atención al ciudadano
+                        según los lineamientos de
+                        experiencia de servicio.
+                    </li>
+
+                    <li>
+                        Alistamiento y clasificación
+                        de los documentos para el
+                        control de inventarios.
+                    </li>
+
+                    <li>
+                        Generar la factura del
+                        impuesto vehicular al
+                        contribuyente y recaudar
+                        el pago del mismo.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- CURSOS COMPLEMENTARIOS -->
+
+        <section id="cursos">
+
+            <h2>Cursos y formación complementaria</h2>
+
+            <div class="curso">
+
+                <h3>
+                    Comunicación, Redes Sociales y Publicidad
+                </h3>
+
+                <p>
+                    Institución Universitaria
+                    Colegio Mayor de Antioquia
+                </p>
+
+                <p><strong>Año:</strong> 2020</p>
+
+            </div>
+
+            <div class="curso">
+
+                <h3>
+                    Introducción al Mercado
+                </h3>
+
+                <p>
+                    Universidad Nacional Autónoma
+                    de México - Coursera
+                </p>
+
+                <p><strong>Año:</strong> 2020</p>
+
+            </div>
+
+            <div class="curso">
+
+                <h3>
+                    Vende en Línea
+                </h3>
+
+                <p>
+                    Ministerio de Tecnologías
+                    de la Información y
+                    las Comunicaciones
+                </p>
+
+                <p><strong>Año:</strong> 2022</p>
+
+            </div>
+
+        </section>
+
+        <!-- PROYECTOS PERSONALES Y PROFESIONALES -->
+
+        <section id="proyectos">
+
+            <h2>
+                Mis proyectos: Pasado, presente y futuro
+            </h2>
+
+            <div class="contenedor-proyectos">
+
+                <!-- PASADO -->
+
+                <div class="proyecto pasado">
+
+                    <h3>Mi pasado</h3>
+
+                    <p>
+
+                        Uno de mis principales logros
+                        académicos fue culminar mi
+                        Tecnología en Gestión
+                        Administrativa en el año 2021,
+                        durante un período marcado por
+                        los desafíos de la pandemia.
+
+                        Esta experiencia fortaleció
+                        mi capacidad de adaptación,
+                        disciplina, perseverancia
+                        y compromiso con mi
+                        formación profesional.
+
+                    </p>
+
+                </div>
+
+                <!-- PRESENTE -->
+
+                <div class="proyecto presente">
+
+                    <h3>Mi presente</h3>
+
+                    <p>
+
+                        Actualmente me encuentro
+                        cursando el séptimo semestre
+                        de Administración Tecnológica
+                        en la Institución Universitaria ITM.
+
+                        Mi principal objetivo es
+                        culminar exitosamente mis
+                        estudios y obtener mi título
+                        profesional, fortaleciendo
+                        mis competencias para asumir
+                        nuevos retos en el ámbito
+                        empresarial y tecnológico.
+
+                    </p>
+
+                </div>
+
+                <!-- FUTURO -->
+
+                <div class="proyecto futuro">
+
+                    <h3>Mi futuro</h3>
+
+                    <p>
+
+                        Uno de mis principales
+                        proyectos personales y
+                        profesionales es dominar
+                        un segundo idioma,
+                        especialmente el inglés.
+
+                        Este objetivo me permitirá
+                        ampliar mis oportunidades
+                        laborales, acceder a
+                        conocimientos internacionales
+                        y desenvolverme en contextos
+                        empresariales globales.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LINKEDIN -->
+
+        <section id="linkedin">
+
+            <h2>Mi red profesional</h2>
+
+            <div class="linkedin">
+
+                <h3>LinkedIn</h3>
+
+                <p>
+                    Conoce más sobre mi trayectoria
+                    académica y profesional en LinkedIn.
+                </p>
+
+                <a
+                    href="https://www.linkedin.com/in/meilin-mejia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="boton boton-linkedin">
+
+                    Visitar mi perfil de LinkedIn
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACTO -->
+
+        <section id="contacto" class="contacto">
+
+            <h2>Contacto</h2>
+
+            <p>
+                Estoy interesada en oportunidades
+                de desarrollo profesional,
+                aprendizaje y crecimiento
+                en el sector administrativo
+                y tecnológico.
+            </p>
+
+            <p>
+                <strong>Nombre:</strong>
+                Meilyn Mejia Palacio
+            </p>
+
+
+
+            <p>
+                <strong>Ubicación:</strong>
+                Medellín, Antioquia
+            </p>
+
+            <p>
+                <strong>LinkedIn:</strong>
+
+                <a
+                    href="https://www.linkedin.com/in/meilin-mejia"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    linkedin.com/in/meilin-mejia
+
+                </a>
+
+            </p>
+
+
+
+        </section>
+
+        <!-- DESCARGAR PORTAFOLIO -->
+
+        <section id="descargar" class="descarga">
+
+            <h2>Descargar portafolio profesional</h2>
+
+            <p>
+                Descarga una versión de mi portafolio
+                profesional en formato PDF,
+                incluyendo mi formación,
+                experiencia y proyectos.
+            </p>
+
+            <button
+                class="boton boton-pdf"
+                onclick="descargarPDF()">
+
+                Descargar portafolio en PDF
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <p>
+            © 2026 Meilyn Mejia Palacio
+        </p>
+
+        <p>
+            Portafolio profesional |
+            Administración Tecnológica
+        </p>
+
+        <p>
+            Medellín, Antioquia
+        </p>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function descargarPDF() {
+
+            /*
+             * Abre el diálogo de impresión.
+             * Selecciona "Guardar como PDF".
+             */
+
+            window.print();
+
+        }
+
+    </script>
+
+</body>
+</html>
