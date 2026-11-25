@@ -4,13 +4,13 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Portafolio Profesional | Meilyn Mejia Palacio</title>
-
-    <!-- LIBRERÍA PARA GENERAR CÓDIGOS QR -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <title>
+        Portafolio Profesional | Meilyn Mejia Palacio
+    </title>
 
     <style>
 
@@ -41,6 +41,7 @@
                 #14263D,
                 #315779
             );
+
             color: white;
             text-align: center;
             padding: 65px 20px;
@@ -65,7 +66,9 @@
             flex-wrap: wrap;
             gap: 25px;
             padding: 18px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+            box-shadow:
+                0 3px 12px rgba(0,0,0,0.08);
         }
 
         nav a {
@@ -91,14 +94,19 @@
             margin-bottom: 25px;
             padding: 35px;
             border-radius: 14px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.06);
         }
 
         h2 {
             color: #254A70;
             margin-bottom: 20px;
             font-size: 25px;
-            border-bottom: 2px solid #DBE5EF;
+
+            border-bottom:
+                2px solid #DBE5EF;
+
             padding-bottom: 10px;
         }
 
@@ -114,7 +122,10 @@
 
         .datos {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 18px;
         }
 
@@ -131,35 +142,115 @@
             margin-bottom: 5px;
         }
 
-        /* TARJETAS */
+        /* TARJETAS GENERALES */
 
         .tarjeta {
             border-left: 4px solid #447CA9;
             background: #F4F7FB;
+
             padding: 20px;
-            margin-top: 12px;
-            border-radius: 5px;
+            margin-top: 15px;
+            border-radius: 6px;
         }
 
         .tarjeta h3 {
             color: #254A70;
+            margin-bottom: 10px;
+        }
+
+        /* EXPERIENCIA LABORAL */
+
+        .experiencia {
+            margin-bottom: 25px;
+            padding: 25px;
+            background: #F4F7FB;
+
+            border-left:
+                5px solid #315779;
+
+            border-radius: 8px;
+        }
+
+        .experiencia h3 {
+            color: #254A70;
+            font-size: 21px;
             margin-bottom: 8px;
+        }
+
+        .empresa {
+            font-weight: bold;
+            color: #315779;
+            margin-bottom: 5px;
+        }
+
+        .fecha {
+            color: #66788A;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .experiencia h4 {
+            color: #254A70;
+            margin-bottom: 10px;
+        }
+
+        .experiencia ul {
+            margin-left: 23px;
+        }
+
+        .experiencia li {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        /* CURSOS COMPLEMENTARIOS */
+
+        .curso {
+            background: #F4F7FB;
+
+            border-left:
+                4px solid #447CA9;
+
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 7px;
+        }
+
+        .curso h3 {
+            color: #254A70;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .curso p {
+            margin-bottom: 5px;
+        }
+
+        .curso .anio {
+            color: #66788A;
+            font-weight: bold;
         }
 
         /* BOTONES */
 
         .boton {
             display: inline-block;
+
             padding: 14px 25px;
             margin: 10px 5px;
+
             background-color: #254A70;
             color: white;
+
             border: none;
             border-radius: 8px;
+
             font-size: 16px;
             font-weight: bold;
+
             cursor: pointer;
             text-decoration: none;
+
             transition: 0.3s;
         }
 
@@ -176,14 +267,6 @@
             background-color: #C04353;
         }
 
-        .boton-qr {
-            background-color: #254A70;
-        }
-
-        .boton-contacto {
-            background-color: #254A70;
-        }
-
         /* DESCARGA PDF */
 
         .descarga {
@@ -192,34 +275,6 @@
 
         .descarga p {
             margin-bottom: 15px;
-        }
-
-        /* CÓDIGO QR */
-
-        .seccion-qr {
-            text-align: center;
-        }
-
-        #codigoQR {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 25px auto;
-            min-height: 200px;
-        }
-
-        #codigoQR img,
-        #codigoQR canvas {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .mensaje-qr {
-            background: #F1F5FA;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 15px;
-            overflow-wrap: anywhere;
         }
 
         /* CONTACTO */
@@ -239,8 +294,10 @@
         footer {
             text-align: center;
             padding: 25px;
+
             background-color: #14263D;
             color: white;
+
             margin-top: 30px;
         }
 
@@ -268,9 +325,13 @@
                 width: 100%;
                 margin: 8px 0;
             }
+
+            .experiencia {
+                padding: 18px;
+            }
         }
 
-        /* ESTILOS PARA GUARDAR COMO PDF */
+        /* CONFIGURACIÓN PARA PDF */
 
         @media print {
 
@@ -282,6 +343,7 @@
             body {
                 background: white !important;
                 color: black;
+                font-size: 12px;
             }
 
             header {
@@ -305,7 +367,7 @@
                 border: 1px solid #ddd;
                 margin: 15px 0;
                 padding: 20px;
-                break-inside: avoid;
+                break-inside: auto;
             }
 
             nav,
@@ -316,11 +378,10 @@
             }
 
             .tarjeta,
-            .dato {
+            .dato,
+            .experiencia,
+            .curso {
                 background: #F1F5FA !important;
-            }
-
-            .seccion-qr {
                 break-inside: avoid;
             }
 
@@ -330,6 +391,10 @@
             }
 
             h2 {
+                color: #254A70;
+            }
+
+            .experiencia h3 {
                 color: #254A70;
             }
         }
@@ -345,7 +410,9 @@
 
         <h1>Meilyn Mejia Palacio</h1>
 
-        <p>Estudiante de Administración Tecnológica</p>
+        <p>
+            Estudiante de Administración Tecnológica
+        </p>
 
         <p>
             Institución Universitaria ITM |
@@ -359,11 +426,17 @@
     <nav class="no-imprimir">
 
         <a href="#inicio">Sobre mí</a>
+
         <a href="#datos">Datos personales</a>
+
         <a href="#formacion">Formación</a>
+
         <a href="#experiencia">Experiencia</a>
+
+        <a href="#cursos">Cursos</a>
+
         <a href="#descargar">Descargar PDF</a>
-        <a href="#qr">Código QR</a>
+
         <a href="#contacto">Contacto</a>
 
     </nav>
@@ -377,32 +450,44 @@
             <h2>Sobre mí y perfil profesional</h2>
 
             <p class="perfil">
+
                 Soy Meilyn Mejia Palacio, estudiante
                 de séptimo semestre de Administración
                 Tecnológica en la Institución
                 Universitaria ITM, ubicada en
                 Medellín, Antioquia.
+
             </p>
 
             <p class="perfil">
-                Cuento con experiencia como Auxiliar
-                Administrativo y me encuentro en proceso
-                de formación profesional para fortalecer
-                mis conocimientos en gestión administrativa,
-                organización empresarial y procesos
-                tecnológicos.
+
+                Cuento con experiencia laboral en
+                áreas administrativas, operativas
+                y de atención al ciudadano.
+
+                He desarrollado actividades
+                relacionadas con gestión documental,
+                manejo de inventarios, negociación
+                con proveedores, administración
+                de información y apoyo a procesos
+                organizacionales.
+
             </p>
 
             <p class="perfil">
-                Mi objetivo es continuar creciendo
-                profesionalmente y aportar mis
-                conocimientos al desarrollo de
-                las organizaciones.
+
+                Mi objetivo es continuar fortaleciendo
+                mis competencias profesionales y
+                aportar al mejoramiento de los
+                procesos administrativos,
+                tecnológicos y organizacionales.
+
             </p>
 
             <h2>Perfil del Administrador Tecnológico ITM</h2>
 
             <p class="perfil">
+
                 El Administrador Tecnológico del ITM es un
                 ciudadano global que cuenta con formación
                 integral, con cualidades éticas y de
@@ -415,6 +500,7 @@
                 organizaciones en las que interviene,
                 lo cual le permite tomar decisiones en
                 contextos complejos, dinámicos e inciertos.
+
             </p>
 
         </section>
@@ -501,36 +587,221 @@
 
             <h2>Experiencia laboral</h2>
 
-            <div class="tarjeta">
+            <!-- EXPERIENCIA 1 -->
 
-                <h3>Auxiliar Administrativo</h3>
+            <div class="experiencia">
 
-                <p>
-                    Experiencia laboral en el área
-                    administrativa.
+                <h3>
+                    Auxiliar Operativo de Servicio
+                </h3>
+
+                <p class="empresa">
+                    Empresa: Quipux
                 </p>
 
+                <p class="fecha">
+                    Marzo 2017 – Abril 2020
+                </p>
+
+                <h4>Funciones desempeñadas:</h4>
+
+                <ul>
+
+                    <li>
+                        Brindar atención al ciudadano
+                        según los lineamientos de
+                        experiencia de servicio.
+                    </li>
+
+                    <li>
+                        Alistamiento y clasificación
+                        de los documentos para el
+                        control de inventarios.
+                    </li>
+
+                    <li>
+                        Generar la factura del
+                        impuesto vehicular al
+                        contribuyente y recaudar
+                        el pago del mismo.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- EXPERIENCIA 2 -->
+
+            <div class="experiencia">
+
+                <h3>
+                    Aprendiz Administrativo
+                </h3>
+
+                <p class="empresa">
+                    Empresa: ICONTEC
+                </p>
+
+                <p class="fecha">
+                    Febrero 2021 – Julio 2021
+                </p>
+
+                <h4>Funciones desempeñadas:</h4>
+
+                <ul>
+
+                    <li>
+                        Manejo de información
+                        digital de los certificados
+                        preimpresos, auditorías
+                        e informes.
+                    </li>
+
+                    <li>
+                        Enviar y almacenar las
+                        bases de datos a las
+                        partes interesadas para
+                        su debido control.
+                    </li>
+
+                    <li>
+                        Generar y enviar información
+                        de las cuentas de cobro.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- EXPERIENCIA 3 -->
+
+            <div class="experiencia">
+
+                <h3>
+                    Auxiliar Administrativo
+                </h3>
+
+                <p class="empresa">
+                    Empresa: Digital Access
+                </p>
+
+                <p class="fecha">
+                    Octubre 2022 – Octubre 2026
+                </p>
+
+                <h4>Funciones desempeñadas:</h4>
+
+                <ul>
+
+                    <li>
+                        Negociar y evaluar con los
+                        proveedores los plazos
+                        de entrega, precios y
+                        condiciones de compra.
+                    </li>
+
+                    <li>
+                        Manejo de personal,
+                        documentación e inventario.
+                    </li>
+
+                    <li>
+                        Apoyar el seguimiento del
+                        sistema de seguridad y
+                        salud ocupacional en
+                        la empresa.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- CURSOS COMPLEMENTARIOS -->
+
+        <section id="cursos">
+
+            <h2>Cursos y formación complementaria</h2>
+
+            <!-- CURSO 1 -->
+
+            <div class="curso">
+
+                <h3>
+                    Comunicación, Redes Sociales
+                    y Publicidad
+                </h3>
+
                 <p>
-                    Esta experiencia complementa
-                    mi formación académica en
-                    Administración Tecnológica
-                    y contribuye a mi desarrollo
-                    profesional.
+                    <strong>Institución:</strong>
+                    Institución Universitaria
+                    Colegio Mayor de Antioquia
+                </p>
+
+                <p class="anio">
+                    Año: 2020
+                </p>
+
+            </div>
+
+            <!-- CURSO 2 -->
+
+            <div class="curso">
+
+                <h3>
+                    Introducción al Mercado
+                </h3>
+
+                <p>
+                    <strong>Institución:</strong>
+                    Universidad Nacional Autónoma
+                    de México (Coursera)
+                </p>
+
+                <p class="anio">
+                    Año: 2020
+                </p>
+
+            </div>
+
+            <!-- CURSO 3 -->
+
+            <div class="curso">
+
+                <h3>
+                    Vende en Línea
+                </h3>
+
+                <p>
+                    <strong>Institución:</strong>
+                    Ministerio de Tecnologías
+                    de la Información y
+                    las Comunicaciones
+                </p>
+
+                <p class="anio">
+                    Año: 2022
                 </p>
 
             </div>
 
         </section>
 
-        <!-- DESCARGAR EN PDF -->
+        <!-- DESCARGAR PORTAFOLIO EN PDF -->
 
         <section id="descargar" class="descarga">
 
             <h2>Descargar mi portafolio</h2>
 
             <p>
-                Puedes guardar una copia de mi
-                portafolio profesional en formato PDF.
+
+                Puedes descargar una copia
+                de mi portafolio profesional
+                en formato PDF para consultar
+                mi formación académica,
+                experiencia laboral y cursos.
+
             </p>
 
             <button
@@ -543,36 +814,6 @@
 
         </section>
 
-        <!-- CÓDIGO QR -->
-
-        <section id="qr" class="seccion-qr">
-
-            <h2>Escanea mi portafolio</h2>
-
-            <p>
-                Escanea el siguiente código QR
-                con la cámara de tu celular para
-                visitar mi portafolio profesional.
-            </p>
-
-            <div id="codigoQR"></div>
-
-            <div class="mensaje-qr" id="mensajeQR">
-                Generando código QR...
-            </div>
-
-            <button
-                class="boton boton-qr no-imprimir"
-                id="botonDescargarQR"
-                onclick="descargarQR()"
-                style="display:none;">
-
-                Descargar código QR
-
-            </button>
-
-        </section>
-
         <!-- CONTACTO -->
 
         <section id="contacto" class="contacto">
@@ -580,26 +821,33 @@
             <h2>Contacto</h2>
 
             <p>
-                Si deseas comunicarte conmigo para
-                oportunidades laborales o profesionales,
-                puedes hacerlo a través de mi correo.
+
+                Si deseas comunicarte conmigo
+                para oportunidades laborales
+                o profesionales, puedes hacerlo
+                a través de mi correo electrónico.
+
             </p>
 
             <p>
+
                 <strong>Correo electrónico:</strong>
 
                 <a href="mailto:j.palacio1013@gmail.com">
                     j.palacio1013@gmail.com
                 </a>
+
             </p>
 
             <p>
+
                 <strong>Ubicación:</strong>
                 Medellín, Antioquia
+
             </p>
 
             <a
-                class="boton boton-contacto"
+                class="boton"
                 href="mailto:j.palacio1013@gmail.com">
 
                 ✉️ Contáctame
@@ -623,153 +871,28 @@
 
     </footer>
 
-    <!-- FUNCIONES JAVASCRIPT -->
+    <!-- JAVASCRIPT -->
 
     <script>
 
         /*
-         * CONFIGURACIÓN DEL CÓDIGO QR
-         *
-         * Cuando publiques la página puedes
-         * colocar aquí el enlace público.
-         *
-         * Ejemplo:
-         *
-         * const URL_PORTAFOLIO =
-         * "https://tuusuario.github.io/portafolio/";
-         *
-         * Si lo dejas vacío y la página está
-         * publicada, se utilizará su URL actual.
+         * FUNCIÓN PARA GUARDAR
+         * EL PORTAFOLIO EN PDF
          */
-
-        const URL_PORTAFOLIO = "";
-
-        /* DESCARGAR PORTAFOLIO COMO PDF */
 
         function descargarPDF() {
 
-            // Abre el diálogo del navegador.
-            // Selecciona "Guardar como PDF".
+            /*
+             * Se abre la ventana de impresión
+             * del navegador.
+             *
+             * Selecciona:
+             * "Guardar como PDF".
+             */
 
             window.print();
 
         }
-
-        /* GENERAR CÓDIGO QR */
-
-        function generarQR() {
-
-            const contenedor =
-                document.getElementById("codigoQR");
-
-            const mensaje =
-                document.getElementById("mensajeQR");
-
-            const boton =
-                document.getElementById("botonDescargarQR");
-
-            const url = URL_PORTAFOLIO.trim() ||
-                (window.location.protocol === "https:" ||
-                 window.location.protocol === "http:"
-                    ? window.location.href
-                    : "");
-
-            if (!url || !/^https?:\/\//i.test(url)) {
-
-                mensaje.textContent =
-                    "Para generar un QR que funcione " +
-                    "desde otros celulares, publica " +
-                    "tu portafolio en internet o " +
-                    "configura su dirección pública " +
-                    "en la variable URL_PORTAFOLIO.";
-
-                return;
-            }
-
-            if (typeof QRCode === "undefined") {
-
-                mensaje.textContent =
-                    "No se pudo cargar la biblioteca QR. " +
-                    "Comprueba tu conexión a internet.";
-
-                return;
-            }
-
-            contenedor.innerHTML = "";
-
-            new QRCode(contenedor, {
-
-                text: url,
-
-                width: 200,
-
-                height: 200,
-
-                colorDark: "#14263D",
-
-                colorLight: "#FFFFFF",
-
-                correctLevel: QRCode.CorrectLevel.H
-
-            });
-
-            mensaje.textContent =
-                "Escanea el código para visitar: " + url;
-
-            boton.style.display = "inline-block";
-
-        }
-
-        /* DESCARGAR CÓDIGO QR */
-
-        function descargarQR() {
-
-            const contenedor =
-                document.getElementById("codigoQR");
-
-            const imagen =
-                contenedor.querySelector("img");
-
-            const canvas =
-                contenedor.querySelector("canvas");
-
-            let origen = "";
-
-            if (canvas) {
-
-                origen = canvas.toDataURL("image/png");
-
-            } else if (imagen) {
-
-                origen = imagen.src;
-
-            }
-
-            if (!origen) {
-
-                alert("No se pudo descargar el código QR.");
-
-                return;
-            }
-
-            const enlace = document.createElement("a");
-
-            enlace.href = origen;
-
-            enlace.download =
-                "Codigo_QR_Meilyn_Mejia_Palacio.png";
-
-            document.body.appendChild(enlace);
-
-            enlace.click();
-
-            document.body.removeChild(enlace);
-
-        }
-
-        /* GENERACIÓN AUTOMÁTICA DEL QR */
-
-        window.addEventListener("load", generarQR);
 
     </script>
 
