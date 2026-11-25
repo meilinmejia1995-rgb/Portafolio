@@ -1,414 +1,485 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portafolio profesional | Meilyn Mejia Palacio</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Portafolio Profesional | Meilyn Mejia Palacio
+    </title>
 
     <style>
-        :root {
-            --azul: #203e5c;
-            --azul-oscuro: #142a40;
-            --verde: #14645d;
-            --verde-claro: #e4f3ef;
-            --texto: #293948;
-            --secundario: #526779;
-            --linea: #d5e1e8;
-            --superficie: #f5f8fa;
+
+        /* ESTILOS GENERALES */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        * { box-sizing: border-box; }
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
-            margin: 0;
-            background: #eaf0f4;
-            color: var(--texto);
-            font-family: "Segoe UI", Arial, sans-serif;
-            line-height: 1.65;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #E9EEF4;
+            color: #293548;
+            line-height: 1.7;
         }
 
-        h1, h2, h3, p, dl, dd, ul { margin: 0; }
+        /* ENCABEZADO */
 
-        h1, h2, h3 { line-height: 1.22; }
-
-        h2 {
-            margin-bottom: 1.4rem;
-            color: var(--azul);
-            font-size: clamp(1.45rem, 3vw, 1.9rem);
-        }
-
-        h3 {
-            color: var(--azul);
-            font-size: 1.15rem;
-        }
-
-        a {
-            color: var(--verde);
-            text-underline-offset: 0.2em;
-        }
-
-        a:hover { text-decoration-thickness: 2px; }
-
-        :focus-visible {
-            outline: 3px solid #b86a13;
-            outline-offset: 4px;
-        }
-
-        /* Encabezado y navegación */
-        .portada {
-            padding: 3rem 1.25rem;
-            background: linear-gradient(125deg, #14263d, #315779);
+        header {
+            background: linear-gradient(
+                135deg, #14263D, #315779
+            );
             color: white;
             text-align: center;
+            padding: 55px 20px;
         }
 
+        /* FOTOGRAFÍA PROFESIONAL */
+
         .foto-perfil {
-            width: 160px;
-            height: 160px;
-            border: 4px solid white;
+            width: 185px;
+            height: 185px;
             border-radius: 50%;
             object-fit: cover;
             object-position: center 25%;
-            box-shadow: 0 6px 20px #13253845;
+            border: 5px solid white;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
         }
 
-        .portada h1 {
-            margin: 1rem 0 0.6rem;
-            font-size: clamp(2rem, 5vw, 2.65rem);
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
         }
 
-        .portada p { color: #edf4fa; }
-        .portada .institucion { margin-top: 0.6rem; }
+        header p {
+            font-size: 18px;
+            color: #E3EBF5;
+        }
+
+        .subtitulo {
+            margin-top: 12px;
+            font-size: 17px;
+        }
+
+        /* MENÚ DE NAVEGACIÓN */
 
         nav {
+            background: white;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.3rem 1.2rem;
-            padding: 0.7rem 1rem;
-            background: white;
-            border-bottom: 1px solid var(--linea);
+            gap: 20px;
+            padding: 18px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
         nav a {
-            padding: 0.35rem 0;
-            color: var(--azul);
-            font-weight: 600;
+            color: #254A70;
             text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
         }
 
-        nav a:hover { text-decoration: underline; }
+        nav a:hover {
+            color: #447CA9;
+        }
+
+        /* CONTENIDO PRINCIPAL */
 
         main {
-            width: min(1050px, 100%);
-            margin: 2rem auto;
-            padding: 0 1rem;
+            max-width: 1050px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
         section {
-            margin-bottom: 1.5rem;
-            padding: clamp(1.25rem, 4vw, 2.25rem);
-            border: 1px solid var(--linea);
-            border-radius: 16px;
             background: white;
-            box-shadow: 0 5px 18px #203e5c09;
-            scroll-margin-top: 1rem;
+            margin-bottom: 25px;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
         }
 
-        .perfil p + p { margin-top: 0.9rem; }
+        h2 {
+            color: #254A70;
+            margin-bottom: 22px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #DBE5EF;
+            font-size: 25px;
+        }
 
-        /* Datos personales y proyectos */
-        .datos, .proyectos, .formaciones {
+        h3 {
+            color: #254A70;
+            margin-bottom: 8px;
+        }
+
+        /* PERFIL PROFESIONAL */
+
+        .perfil {
+            font-size: 17px;
+            text-align: justify;
+            margin-bottom: 18px;
+        }
+
+        /* DATOS PERSONALES */
+
+        .datos {
             display: grid;
-            gap: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
         }
 
-        .datos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-        .proyectos, .formaciones {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-
-        .datos > div, .proyecto {
-            padding: 1rem 1.15rem;
-            border-radius: 10px;
-            background: var(--superficie);
+        .dato {
+            background: #F1F5FA;
+            padding: 15px;
+            border-radius: 9px;
             overflow-wrap: anywhere;
         }
 
-        dt {
-            margin-bottom: 0.15rem;
-            color: var(--secundario);
-            font-size: 0.88rem;
-            font-weight: 600;
+        .dato strong {
+            display: block;
+            color: #254A70;
+            margin-bottom: 5px;
         }
 
-        .proyecto { border-top: 4px solid #7893ac; }
-        .proyecto:nth-child(2) { border-color: var(--azul); }
-        .proyecto:nth-child(3) { border-color: var(--verde); }
-        .proyecto h3 { margin-bottom: 0.75rem; }
+        /* FORMACIÓN ACADÉMICA */
 
-        /* Formación académica */
-        .estudio {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 1.25rem;
-            border: 1px solid var(--linea);
-            border-radius: 12px;
-            background: var(--superficie);
+        .formacion {
+            padding: 22px;
+            margin-bottom: 20px;
+            background: #F4F7FB;
+            border-left: 5px solid #315779;
+            border-radius: 8px;
         }
 
-        .estudio.actual {
-            background: #f2faf7;
-            border-color: #a3cdc2;
+        .formacion h3 {
+            font-size: 20px;
         }
 
-        .nivel {
-            margin-bottom: 0.65rem;
-            color: var(--secundario);
-            font-size: 0.85rem;
-            font-weight: 600;
+        .formacion p {
+            margin-bottom: 5px;
         }
 
-        .estudio h3 { margin-bottom: 0.45rem; }
-        .centro { padding-bottom: 1.2rem; }
+        /* EXPERIENCIA LABORAL */
 
-        .estado {
-            margin-top: auto;
-            padding: 0.28rem 0.7rem;
-            border-radius: 6px;
-            background: #e4ebf0;
-            color: var(--azul);
-            font-size: 0.88rem;
-            font-weight: 600;
-        }
-
-        .actual .estado {
-            background: var(--verde-claro);
-            color: var(--verde);
-        }
-
-        /* Experiencia laboral */
-        .trayectoria {
-            margin-left: 0.4rem;
-            border-left: 2px solid #c3d7d3;
-        }
-
-        .puesto {
-            position: relative;
-            margin-left: 1.4rem;
-            padding: 0 0 1.5rem;
-        }
-
-        .puesto + .puesto {
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--linea);
-        }
-
-        .puesto:last-child { padding-bottom: 0; }
-
-        .puesto::before {
-            content: "";
-            position: absolute;
-            left: calc(-1.4rem - 7px);
-            top: 0.35rem;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--verde);
-            box-shadow: 0 0 0 3px white;
-        }
-
-        .puesto + .puesto::before { top: 1.85rem; }
-
-        .cabecera-puesto {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            gap: 0.3rem 1rem;
+        .experiencia {
+            padding: 25px;
+            margin-bottom: 25px;
+            background: #F4F7FB;
+            border-left: 5px solid #315779;
+            border-radius: 8px;
         }
 
         .empresa {
-            margin: 0.3rem 0 0.65rem;
-            color: var(--verde);
-            font-weight: 600;
+            font-weight: bold;
+            color: #315779;
         }
 
-        .periodo {
-            color: var(--secundario);
-            font-size: 0.9rem;
+        .fecha {
+            color: #66788A;
+            font-size: 15px;
+            margin-bottom: 15px;
         }
 
-        .puesto ul { padding-left: 1.2rem; }
-        .puesto li + li { margin-top: 0.3rem; }
-        .puesto li::marker { color: var(--verde); }
-
-        /* Cursos */
-        .cursos {
-            padding: 0;
-            list-style: none;
+        .experiencia h4 {
+            color: #254A70;
+            margin-bottom: 10px;
         }
 
-        .cursos li {
+        .experiencia ul {
+            margin-left: 23px;
+        }
+
+        .experiencia li {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        /* CURSOS */
+
+        .curso {
+            background: #F4F7FB;
+            border-left: 4px solid #447CA9;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 7px;
+        }
+
+        .curso p {
+            margin-bottom: 5px;
+        }
+
+        /* PROYECTOS */
+
+        .contenedor-proyectos {
             display: grid;
-            grid-template-columns: 4rem minmax(0, 1fr);
-            align-items: start;
-            gap: 1rem;
-            padding: 1.1rem 0;
-            border-top: 1px solid var(--linea);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
-        .cursos li:last-child { padding-bottom: 0; }
+        .proyecto {
+            background: #F4F7FB;
+            border-radius: 12px;
+            padding: 25px;
+            border-top: 5px solid #315779;
+            transition: 0.3s;
+        }
 
-        .cursos time {
-            padding: 0.25rem;
-            border-radius: 6px;
-            background: var(--verde-claro);
-            color: var(--verde);
-            font-weight: 700;
+        .proyecto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+
+        .proyecto h3 {
+            margin-bottom: 15px;
             text-align: center;
         }
 
-        .cursos p {
-            margin-top: 0.3rem;
-            color: var(--secundario);
+        .proyecto p {
+            text-align: justify;
         }
 
-        /* Contacto y acciones */
-        .contacto {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: start;
-            gap: 1.5rem 2rem;
-            border-top: 4px solid var(--verde);
+        .pasado {
+            border-top-color: #7893AC;
         }
 
-        .contacto h2 { margin-bottom: 0.75rem; }
-
-        .firma {
-            margin-top: 1rem;
-            color: var(--azul);
-            font-weight: 700;
+        .presente {
+            border-top-color: #315779;
         }
 
-        .canales {
-            padding: 1.1rem 1.25rem;
+        .futuro {
+            border-top-color: #1B786F;
+        }
+
+        /* LINKEDIN */
+
+        .linkedin {
+            background: #F1F5FA;
+            padding: 22px;
             border-radius: 10px;
-            background: var(--superficie);
-            font-style: normal;
-            overflow-wrap: anywhere;
+            text-align: center;
+            margin-top: 20px;
         }
 
-        .canales dl > div + div {
-            margin-top: 0.8rem;
-            padding-top: 0.8rem;
-            border-top: 1px solid var(--linea);
+        .linkedin p {
+            margin-bottom: 12px;
         }
+
+        /* BOTONES */
 
         .boton {
             display: inline-block;
-            max-width: 100%;
-            margin-top: 1rem;
-            padding: 0.7rem 1.15rem;
-            border: 0;
-            border-radius: 8px;
-            background: var(--azul);
-            color: white;
-            font: inherit;
-            font-weight: 600;
+            padding: 14px 25px;
+            margin: 10px 5px;
+            background: #254A70;
+            color: white !important;
             text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
             cursor: pointer;
+            transition: 0.3s;
         }
 
-        .boton:hover { background: var(--azul-oscuro); }
-        .contacto .boton { background: var(--verde); }
-        .contacto .boton:hover { background: #104e49; }
-        .descarga, .red { text-align: center; }
+        .boton:hover {
+            background: #447CA9;
+            transform: translateY(-2px);
+        }
 
-        footer {
-            padding: 1.5rem;
-            background: var(--azul-oscuro);
-            color: white;
+        .boton-pdf {
+            background: #A52D3D;
+        }
+
+        .boton-pdf:hover {
+            background: #C04353;
+        }
+
+        .boton-linkedin {
+            background: #0A66C2;
+        }
+
+        .boton-linkedin:hover {
+            background: #084C91;
+        }
+
+        /* DESCARGA PDF */
+
+        .descarga {
             text-align: center;
         }
 
-        @media (max-width: 760px) {
-            .formaciones, .proyectos, .contacto {
+        /* CONTACTO */
+
+        .contacto a:not(.boton) {
+            color: #254A70;
+            overflow-wrap: anywhere;
+        }
+
+        .contacto p {
+            margin-bottom: 12px;
+        }
+
+        /* PIE DE PÁGINA */
+
+        footer {
+            background: #14263D;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* ADAPTACIÓN A CELULARES */
+
+        @media (max-width: 750px) {
+
+            .datos {
                 grid-template-columns: 1fr;
             }
 
-            .cabecera-puesto {
-                flex-direction: column;
-                gap: 0.25rem;
-            }
-        }
-
-        @media (max-width: 520px) {
-            .datos { grid-template-columns: 1fr; }
-            .portada { padding: 2rem 1rem; }
-            .foto-perfil { width: 135px; height: 135px; }
-            .puesto { margin-left: 1rem; }
-            .puesto::before { left: calc(-1rem - 7px); }
-        }
-
-        @media print {
-            @page { size: A4; margin: 15mm; }
-
-            body {
-                background: white;
-                color: black;
-                font-size: 10pt;
+            .contenedor-proyectos {
+                grid-template-columns: 1fr;
             }
 
-            nav, .boton, .descarga { display: none; }
-            main { width: 100%; margin: 0; padding: 0; }
-
-            .portada, footer {
-                padding: 0.7rem;
-                background: white;
-                color: black;
+            header h1 {
+                font-size: 30px;
             }
 
-            .portada p { color: black; }
-            .foto-perfil { width: 85px; height: 85px; }
-            .portada h1 { font-size: 20pt; }
+            .foto-perfil {
+                width: 150px;
+                height: 150px;
+            }
 
             section {
-                padding: 1rem;
-                margin: 0.7rem 0;
-                box-shadow: none;
+                padding: 22px;
             }
 
-            h2, h3 { break-after: avoid; }
-            .estudio, .puesto, .cursos li, .proyecto, .canales {
+            .boton {
+                max-width: 100%;
+            }
+        }
+
+        /* FORMATO PARA PDF */
+
+        @media print {
+
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+
+            body {
+                background: white !important;
+                color: black;
+                font-size: 12px;
+            }
+
+            header {
+                background: #E9EEF4 !important;
+                color: #14263D !important;
+                padding: 20px;
+            }
+
+            header p {
+                color: #14263D !important;
+            }
+
+            .foto-perfil {
+                width: 110px;
+                height: 110px;
+                border: 3px solid #315779;
+            }
+
+            main {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                margin: 15px 0;
+                padding: 20px;
+                break-inside: auto;
+            }
+
+            nav,
+            .descarga,
+            .boton,
+            .no-imprimir {
+                display: none !important;
+            }
+
+            .formacion,
+            .experiencia,
+            .curso,
+            .proyecto {
                 break-inside: avoid;
             }
 
-            .formaciones, .proyectos { display: block; }
-            .estudio + .estudio, .proyecto + .proyecto {
-                margin-top: 0.6rem;
+            .contenedor-proyectos {
+                grid-template-columns: 1fr;
             }
 
-            .contacto { grid-template-columns: 1fr 1fr; }
+            .proyecto {
+                margin-bottom: 12px;
+            }
+
+            footer {
+                background: white !important;
+                color: black;
+            }
         }
+
     </style>
 </head>
 
 <body>
-    <header class="portada">
-        <img class="foto-perfil"
-             src="WhatsApp Image 2026-11-25 at 5.00.48 PM.jpeg"
-             alt="Fotografía de Meilyn Mejia Palacio">
+
+    <!-- ENCABEZADO Y FOTOGRAFÍA -->
+
+    <header>
+
+        <img
+            src="WhatsApp Image 2026-11-25 at 5.00.48 PM.jpeg"
+            alt="Fotografía de Meilyn Mejia Palacio"
+            class="foto-perfil"
+        >
+
         <h1>Meilyn Mejia Palacio</h1>
-        <p>Tecnóloga en Gestión Administrativa</p>
-        <p>Estudiante de Administración Tecnológica</p>
-        <p class="institucion">Institución Universitaria ITM</p>
-        <p>Medellín, Antioquia</p>
+
+        <p>
+            Tecnóloga en Gestión Administrativa
+        </p>
+
+        <p>
+            Estudiante de Administración Tecnológica
+        </p>
+
+        <p class="subtitulo">
+            Institución Universitaria ITM
+        </p>
+
+        <p>
+            Medellín, Antioquia
+        </p>
+
     </header>
 
-    <nav aria-label="Secciones del portafolio">
+    <!-- MENÚ -->
+
+    <nav class="no-imprimir">
+
         <a href="#perfil">Perfil</a>
         <a href="#datos">Datos</a>
         <a href="#educacion">Educación</a>
@@ -417,250 +488,640 @@
         <a href="#proyectos">Proyectos</a>
         <a href="#contacto">Contacto</a>
         <a href="#descargar">PDF</a>
+
     </nav>
 
     <main>
-        <section id="perfil" class="perfil">
+
+        <!-- PERFIL PROFESIONAL UNIFICADO -->
+
+        <section id="perfil">
+
             <h2>Perfil profesional</h2>
-            <p>
-                Tecnóloga en Gestión Administrativa y estudiante de Administración
-                Tecnológica en la Institución Universitaria ITM. Cuento con formación
-                técnica en Seguridad Ocupacional y experiencia laboral en procesos
-                administrativos, operativos y de servicio al ciudadano.
+
+            <p class="perfil">
+
+                Tecnóloga en Gestión Administrativa
+                 y estudiante de Administración
+                 Tecnológica en la Institución
+                 Universitaria ITM.
+
+                Cuento con formación técnica en
+                Seguridad Ocupacional y experiencia
+                laboral en procesos administrativos,
+                operativos y de servicio al ciudadano.
+
             </p>
-            <p>
-                A lo largo de mi trayectoria profesional he desarrollado competencias
-                en gestión documental, administración de inventarios, atención al
-                usuario, manejo de personal, negociación con proveedores, control de
-                información y apoyo al seguimiento del sistema de seguridad y salud
-                en el trabajo. Estas experiencias me han permitido fortalecer mis
-                capacidades de organización, comunicación, análisis y gestión de los
+
+            <p class="perfil">
+
+                A lo largo de mi trayectoria profesional
+                he desarrollado competencias en gestión
+                documental, administración de inventarios,
+                atención al usuario, manejo de personal,
+                negociación con proveedores, control de
+                información y apoyo al seguimiento del
+                sistema de seguridad y salud en el trabajo.
+
+                Estas experiencias me han permitido
+                fortalecer mis capacidades de organización,
+                comunicación, análisis y gestión de los
                 recursos empresariales.
+
             </p>
-            <p>
-                Mi formación en Administración Tecnológica me permite integrar
-                conocimientos administrativos con una visión estratégica orientada
-                a la gestión del conocimiento, la tecnología y la innovación. Me
-                preparo para planear, organizar, dirigir, controlar y evaluar procesos
-                organizacionales, alineándolos con los objetivos empresariales y
-                contribuyendo a la toma de decisiones en entornos dinámicos y cambiantes.
+
+            <p class="perfil">
+
+                Mi formación en Administración Tecnológica
+                me permite integrar conocimientos
+                administrativos con una visión estratégica
+                orientada a la gestión del conocimiento,
+                la tecnología y la innovación.
+
+                Me preparo para planear, organizar,
+                dirigir, controlar y evaluar procesos
+                organizacionales, alineándolos con los
+                objetivos empresariales y contribuyendo
+                a la toma de decisiones en entornos
+                dinámicos y cambiantes.
+
             </p>
-            <p>
-                Me caracterizo por mi compromiso con el aprendizaje continuo, la ética
-                profesional, la responsabilidad y la mejora de los procesos. Mi propósito
-                es aportar al crecimiento y transformación de las organizaciones,
-                promoviendo soluciones eficientes, innovadoras y sostenibles.
+
+            <p class="perfil">
+
+                Me caracterizo por mi compromiso con
+                el aprendizaje continuo, la ética
+                profesional, la responsabilidad y
+                la mejora de los procesos.
+
+                Mi propósito es aportar al crecimiento
+                y transformación de las organizaciones,
+                promoviendo soluciones eficientes,
+                innovadoras y sostenibles.
+
             </p>
+
         </section>
+
+        <!-- DATOS PERSONALES -->
 
         <section id="datos">
+
             <h2>Datos personales</h2>
-            <dl class="datos">
-                <div><dt>Nombre completo</dt><dd>Meilyn Mejia Palacio</dd></div>
-                <div><dt>Documento de identidad</dt><dd>1.066.574.808</dd></div>
-                <div><dt>Edad</dt><dd>31 años</dd></div>
-                <div><dt>Ubicación</dt><dd>Medellín, Antioquia</dd></div>
-                <div><dt>Perfil ocupacional</dt><dd>Administración Tecnológica</dd></div>
-                <div>
-                    <dt>Correo electrónico</dt>
-                    <dd><a href="mailto:j.palacio1013@gmail.com">j.palacio1013@gmail.com</a></dd>
+
+            <div class="datos">
+
+                <div class="dato">
+                    <strong>Nombre completo</strong>
+                    Meilyn Mejia Palacio
                 </div>
-            </dl>
+
+                <div class="dato">
+                    <strong>Documento de identidad</strong>
+                    1.066.574.808
+                </div>
+
+                <div class="dato">
+                    <strong>Edad</strong>
+                    31 años
+                </div>
+
+                <div class="dato">
+                    <strong>Ubicación</strong>
+                    Medellín, Antioquia
+                </div>
+
+                <div class="dato">
+                    <strong>Perfil ocupacional</strong>
+                    Administración Tecnológica
+                </div>
+
+                <div class="dato">
+                    <strong>Correo electrónico</strong>
+                    j.palacio1013@gmail.com
+                </div>
+
+            </div>
+
         </section>
+
+        <!-- FORMACIÓN ACADÉMICA -->
 
         <section id="educacion">
+
             <h2>Formación académica</h2>
-            <div class="formaciones">
-                <article class="estudio actual">
-                    <p class="nivel">Profesional universitario</p>
-                    <h3>Administración Tecnológica</h3>
-                    <p class="centro">Institución Universitaria ITM</p>
-                    <p class="estado">En curso · Séptimo semestre</p>
-                </article>
 
-                <article class="estudio">
-                    <p class="nivel">Tecnológico</p>
-                    <h3>Tecnología en Gestión Administrativa</h3>
-                    <p class="centro">Instituto Tecnológico Metropolitano</p>
-                    <p class="estado">Finalizado · 2021</p>
-                </article>
+            <!-- EDUCACIÓN PROFESIONAL -->
 
-                <article class="estudio">
-                    <p class="nivel">Técnico laboral</p>
-                    <h3>Técnico Laboral en Seguridad Ocupacional</h3>
-                    <p class="centro">Fundación Tecnológica del Sur de Córdoba – INDESCOR</p>
-                    <p class="estado">Finalizado · 2013</p>
-                </article>
+            <div class="formacion">
+
+                <h3>
+                    Administración Tecnológica
+                </h3>
+
+                <p>
+                    <strong>Institución:</strong>
+                    Institución Universitaria ITM
+                </p>
+
+                <p>
+                    <strong>Nivel:</strong>
+                    Profesional universitario
+                </p>
+
+                <p>
+                    <strong>Estado:</strong>
+                    En curso - Séptimo semestre
+                </p>
+
             </div>
+
+            <!-- EDUCACIÓN TECNOLÓGICA -->
+
+            <div class="formacion">
+
+                <h3>
+                    Tecnología en Gestión Administrativa
+                </h3>
+
+                <p>
+                    <strong>Institución:</strong>
+                    Instituto Tecnológico Metropolitano
+                </p>
+
+                <p>
+                    <strong>Nivel:</strong>
+                    Tecnológico
+                </p>
+
+                <p>
+                    <strong>Año:</strong>
+                    2021
+                </p>
+
+                <p>
+                    <strong>Estado:</strong>
+                    Finalizado
+                </p>
+
+            </div>
+
+            <!-- EDUCACIÓN TÉCNICA -->
+
+            <div class="formacion">
+
+                <h3>
+                    Técnico Laboral en Seguridad Ocupacional
+                </h3>
+
+                <p>
+                    <strong>Institución:</strong>
+                    Fundación Tecnológica del Sur de
+                    Córdoba - INDESCOR
+                </p>
+
+                <p>
+                    <strong>Nivel:</strong>
+                    Técnico laboral
+                </p>
+
+                <p>
+                    <strong>Año:</strong>
+                    2013
+                </p>
+
+                <p>
+                    <strong>Estado:</strong>
+                    Finalizado
+                </p>
+
+            </div>
+
         </section>
+
+        <!-- EXPERIENCIA LABORAL -->
 
         <section id="experiencia">
+
             <h2>Experiencia laboral</h2>
-            <div class="trayectoria">
-                <article class="puesto">
-                    <div class="cabecera-puesto">
-                        <h3>Auxiliar Administrativo</h3>
-                        <p class="periodo">Octubre 2022 – Octubre 2026</p>
-                    </div>
-                    <p class="empresa">Digital Access</p>
-                    <ul>
-                        <li>Negociar y evaluar con los proveedores los plazos de entrega, precios y condiciones de compra.</li>
-                        <li>Manejo de personal, documentación e inventario.</li>
-                        <li>Apoyar el seguimiento del sistema de seguridad y salud ocupacional en la empresa.</li>
-                    </ul>
-                </article>
 
-                <article class="puesto">
-                    <div class="cabecera-puesto">
-                        <h3>Aprendiz Administrativo</h3>
-                        <p class="periodo">Febrero 2021 – Julio 2021</p>
-                    </div>
-                    <p class="empresa">ICONTEC</p>
-                    <ul>
-                        <li>Manejo de información digital de los certificados preimpresos, auditorías e informes.</li>
-                        <li>Enviar y almacenar las bases de datos a las partes interesadas para su debido control.</li>
-                        <li>Generar y enviar información de las cuentas de cobro.</li>
-                    </ul>
-                </article>
+            <!-- DIGITAL ACCESS -->
 
-                <article class="puesto">
-                    <div class="cabecera-puesto">
-                        <h3>Auxiliar Operativo de Servicio</h3>
-                        <p class="periodo">Marzo 2017 – Abril 2020</p>
-                    </div>
-                    <p class="empresa">Quipux</p>
-                    <ul>
-                        <li>Brindar atención al ciudadano según los lineamientos de experiencia de servicio.</li>
-                        <li>Alistamiento y clasificación de los documentos para el control de inventarios.</li>
-                        <li>Generar la factura del impuesto vehicular al contribuyente y recaudar el pago del mismo.</li>
-                    </ul>
-                </article>
+            <div class="experiencia">
+
+                <h3>
+                    Auxiliar Administrativo
+                </h3>
+
+                <p class="empresa">
+                    Digital Access
+                </p>
+
+                <p class="fecha">
+                    Octubre 2022 – Octubre 2026
+                </p>
+
+                <h4>Funciones:</h4>
+
+                <ul>
+
+                    <li>
+                        Negociar y evaluar con los
+                        proveedores los plazos de
+                        entrega, precios y condiciones
+                        de compra.
+                    </li>
+
+                    <li>
+                        Manejo de personal,
+                        documentación e inventario.
+                    </li>
+
+                    <li>
+                        Apoyar el seguimiento del
+                        sistema de seguridad y
+                        salud ocupacional en
+                        la empresa.
+                    </li>
+
+                </ul>
+
             </div>
+
+            <!-- ICONTEC -->
+
+            <div class="experiencia">
+
+                <h3>
+                    Aprendiz Administrativo
+                </h3>
+
+                <p class="empresa">
+                    ICONTEC
+                </p>
+
+                <p class="fecha">
+                    Febrero 2021 – Julio 2021
+                </p>
+
+                <h4>Funciones:</h4>
+
+                <ul>
+
+                    <li>
+                        Manejo de información digital
+                        de los certificados preimpresos,
+                        auditorías e informes.
+                    </li>
+
+                    <li>
+                        Enviar y almacenar las bases
+                        de datos a las partes interesadas
+                        para su debido control.
+                    </li>
+
+                    <li>
+                        Generar y enviar información
+                        de las cuentas de cobro.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- QUIPUX -->
+
+            <div class="experiencia">
+
+                <h3>
+                    Auxiliar Operativo de Servicio
+                </h3>
+
+                <p class="empresa">
+                    Quipux
+                </p>
+
+                <p class="fecha">
+                    Marzo 2017 – Abril 2020
+                </p>
+
+                <h4>Funciones:</h4>
+
+                <ul>
+
+                    <li>
+                        Brindar atención al ciudadano
+                        según los lineamientos de
+                        experiencia de servicio.
+                    </li>
+
+                    <li>
+                        Alistamiento y clasificación
+                        de los documentos para el
+                        control de inventarios.
+                    </li>
+
+                    <li>
+                        Generar la factura del
+                        impuesto vehicular al
+                        contribuyente y recaudar
+                        el pago del mismo.
+                    </li>
+
+                </ul>
+
+            </div>
+
         </section>
+
+        <!-- CURSOS COMPLEMENTARIOS -->
 
         <section id="cursos">
+
             <h2>Cursos y formación complementaria</h2>
-            <ul class="cursos">
-                <li>
-                    <time datetime="2022">2022</time>
-                    <div>
-                        <h3>Vende en Línea</h3>
-                        <p>Ministerio de Tecnologías de la Información y las Comunicaciones</p>
-                    </div>
-                </li>
-                <li>
-                    <time datetime="2020">2020</time>
-                    <div>
-                        <h3>Comunicación, Redes Sociales y Publicidad</h3>
-                        <p>Institución Universitaria Colegio Mayor de Antioquia</p>
-                    </div>
-                </li>
-                <li>
-                    <time datetime="2020">2020</time>
-                    <div>
-                        <h3>Introducción al Mercado</h3>
-                        <p>Universidad Nacional Autónoma de México – Coursera</p>
-                    </div>
-                </li>
-            </ul>
+
+            <div class="curso">
+
+                <h3>
+                    Comunicación, Redes Sociales y Publicidad
+                </h3>
+
+                <p>
+                    Institución Universitaria
+                    Colegio Mayor de Antioquia
+                </p>
+
+                <p><strong>Año:</strong> 2020</p>
+
+            </div>
+
+            <div class="curso">
+
+                <h3>
+                    Introducción al Mercado
+                </h3>
+
+                <p>
+                    Universidad Nacional Autónoma
+                    de México - Coursera
+                </p>
+
+                <p><strong>Año:</strong> 2020</p>
+
+            </div>
+
+            <div class="curso">
+
+                <h3>
+                    Vende en Línea
+                </h3>
+
+                <p>
+                    Ministerio de Tecnologías
+                    de la Información y
+                    las Comunicaciones
+                </p>
+
+                <p><strong>Año:</strong> 2022</p>
+
+            </div>
+
         </section>
+
+        <!-- PROYECTOS PERSONALES Y PROFESIONALES -->
 
         <section id="proyectos">
-            <h2>Mis proyectos: Pasado, presente y futuro</h2>
-            <div class="proyectos">
-                <article class="proyecto">
+
+            <h2>
+                Mis proyectos: Pasado, presente y futuro
+            </h2>
+
+            <div class="contenedor-proyectos">
+
+                <!-- PASADO -->
+
+                <div class="proyecto pasado">
+
                     <h3>Mi pasado</h3>
-                    <p>
-                        Uno de mis principales logros académicos fue culminar mi
-                        Tecnología en Gestión Administrativa en el año 2021, durante
-                        un período marcado por los desafíos de la pandemia. Esta
-                        experiencia fortaleció mi capacidad de adaptación, disciplina,
-                        perseverancia y compromiso con mi formación profesional.
-                    </p>
-                </article>
 
-                <article class="proyecto">
+                    <p>
+
+                        Uno de mis principales logros
+                        académicos fue culminar mi
+                        Tecnología en Gestión
+                        Administrativa en el año 2021,
+                        durante un período marcado por
+                        los desafíos de la pandemia.
+
+                        Esta experiencia fortaleció
+                        mi capacidad de adaptación,
+                        disciplina, perseverancia
+                        y compromiso con mi
+                        formación profesional.
+
+                    </p>
+
+                </div>
+
+                <!-- PRESENTE -->
+
+                <div class="proyecto presente">
+
                     <h3>Mi presente</h3>
-                    <p>
-                        Actualmente me encuentro cursando el séptimo semestre de
-                        Administración Tecnológica en la Institución Universitaria ITM.
-                        Mi principal objetivo es culminar exitosamente mis estudios y
-                        obtener mi título profesional, fortaleciendo mis competencias
-                        para asumir nuevos retos en el ámbito empresarial y tecnológico.
-                    </p>
-                </article>
 
-                <article class="proyecto">
+                    <p>
+
+                        Actualmente me encuentro
+                        cursando el séptimo semestre
+                        de Administración Tecnológica
+                        en la Institución Universitaria ITM.
+
+                        Mi principal objetivo es
+                        culminar exitosamente mis
+                        estudios y obtener mi título
+                        profesional, fortaleciendo
+                        mis competencias para asumir
+                        nuevos retos en el ámbito
+                        empresarial y tecnológico.
+
+                    </p>
+
+                </div>
+
+                <!-- FUTURO -->
+
+                <div class="proyecto futuro">
+
                     <h3>Mi futuro</h3>
+
                     <p>
-                        Uno de mis principales proyectos personales y profesionales es
-                        dominar un segundo idioma, especialmente el inglés. Este objetivo
-                        me permitirá ampliar mis oportunidades laborales, acceder a
-                        conocimientos internacionales y desenvolverme en contextos
+
+                        Uno de mis principales
+                        proyectos personales y
+                        profesionales es dominar
+                        un segundo idioma,
+                        especialmente el inglés.
+
+                        Este objetivo me permitirá
+                        ampliar mis oportunidades
+                        laborales, acceder a
+                        conocimientos internacionales
+                        y desenvolverme en contextos
                         empresariales globales.
+
                     </p>
-                </article>
+
+                </div>
+
             </div>
+
         </section>
 
-        <section id="linkedin" class="red">
+        <!-- LINKEDIN -->
+
+        <section id="linkedin">
+
             <h2>Mi red profesional</h2>
-            <p>Conoce más sobre mi trayectoria académica y profesional en LinkedIn.</p>
-            <a class="boton"
-               href="https://www.linkedin.com/in/meilin-mejia"
-               target="_blank" rel="noopener noreferrer">
-                Visitar mi perfil de LinkedIn
-            </a>
+
+            <div class="linkedin">
+
+                <h3>LinkedIn</h3>
+
+                <p>
+                    Conoce más sobre mi trayectoria
+                    académica y profesional en LinkedIn.
+                </p>
+
+                <a
+                    href="https://www.linkedin.com/in/meilin-mejia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="boton boton-linkedin">
+
+                    Visitar mi perfil de LinkedIn
+
+                </a>
+
+            </div>
+
         </section>
+
+        <!-- CONTACTO -->
 
         <section id="contacto" class="contacto">
-            <div>
-                <h2>Información de contacto</h2>
-                <p>
-                    Estoy interesada en oportunidades de desarrollo profesional,
-                    aprendizaje y crecimiento en el sector administrativo y tecnológico.
-                </p>
-                <p class="firma">Meilyn Mejia Palacio</p>
-                <p>Medellín, Antioquia</p>
-                <a class="boton" href="mailto:j.palacio1013@gmail.com">
-                    Enviar correo electrónico
-                </a>
-            </div>
 
-            <address class="canales">
-                <dl>
-                    <div>
-                        <dt>Correo electrónico</dt>
-                        <dd>
-                            <a href="mailto:j.palacio1013@gmail.com">j.palacio1013@gmail.com</a>
-                        </dd>
-                    </div>
-                    <div>
-                        <dt>LinkedIn</dt>
-                        <dd>
-                            <a href="https://www.linkedin.com/in/meilin-mejia"
-                               target="_blank" rel="noopener noreferrer">
-                                linkedin.com/in/meilin-mejia
-                            </a>
-                        </dd>
-                    </div>
-                </dl>
-            </address>
+            <h2>Contacto</h2>
+
+            <p>
+                Estoy interesada en oportunidades
+                de desarrollo profesional,
+                aprendizaje y crecimiento
+                en el sector administrativo
+                y tecnológico.
+            </p>
+
+            <p>
+                <strong>Nombre:</strong>
+                Meilyn Mejia Palacio
+            </p>
+
+            <p>
+                <strong>Correo electrónico:</strong>
+
+                <a href="mailto:j.palacio1013@gmail.com">
+                    j.palacio1013@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>Ubicación:</strong>
+                Medellín, Antioquia
+            </p>
+
+            <p>
+                <strong>LinkedIn:</strong>
+
+                <a
+                    href="https://www.linkedin.com/in/meilin-mejia"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    linkedin.com/in/meilin-mejia
+
+                </a>
+
+            </p>
+
+            <a
+                href="mailto:j.palacio1013@gmail.com"
+                class="boton">
+
+                Enviar correo electrónico
+
+            </a>
+
         </section>
+
+        <!-- DESCARGAR PORTAFOLIO -->
 
         <section id="descargar" class="descarga">
+
             <h2>Descargar portafolio profesional</h2>
-            <p>En la ventana de impresión, selecciona «Guardar como PDF».</p>
-            <button class="boton" type="button" onclick="window.print()">
-                Guardar portafolio en PDF
+
+            <p>
+                Descarga una versión de mi portafolio
+                profesional en formato PDF,
+                incluyendo mi formación,
+                experiencia y proyectos.
+            </p>
+
+            <button
+                class="boton boton-pdf"
+                onclick="descargarPDF()">
+
+                Descargar portafolio en PDF
+
             </button>
+
         </section>
+
     </main>
 
+    <!-- PIE DE PÁGINA -->
+
     <footer>
-        <p>© 2026 Meilyn Mejia Palacio</p>
-        <p>Portafolio profesional | Administración Tecnológica</p>
-        <p>Medellín, Antioquia</p>
+
+        <p>
+            © 2026 Meilyn Mejia Palacio
+        </p>
+
+        <p>
+            Portafolio profesional |
+            Administración Tecnológica
+        </p>
+
+        <p>
+            Medellín, Antioquia
+        </p>
+
     </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function descargarPDF() {
+
+            /*
+             * Abre el diálogo de impresión.
+             * Selecciona "Guardar como PDF".
+             */
+
+            window.print();
+
+        }
+
+    </script>
+
 </body>
 </html>
